@@ -35,7 +35,7 @@ public class CollectionsLens {
         return new Lens<>(
                 (a) -> a.get(key),
                 (a, b) -> {
-                    Map<A, B> c = new LinkedHashMap<>(a);
+                    Map<A, B> c = new HashMap<>(a);
                     c.put(key, b);
                     return c;
                 }
