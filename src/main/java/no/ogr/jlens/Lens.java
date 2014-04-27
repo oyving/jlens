@@ -35,7 +35,7 @@ public class Lens<A, B> {
         return that.compose(this);
     }
 
-    private static <T> Lens<T, T> self() {
+    public static <T> Lens<T, T> self() {
         return new Lens<T, T>((a) -> a, (x, a) -> a);
     }
 }
